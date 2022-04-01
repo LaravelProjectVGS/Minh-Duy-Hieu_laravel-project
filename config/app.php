@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', 'http://localhost/demo1/public'),
+    'asset_url' => env('ASSET_URL', 'http://localhost/Minh-Duy-Hieu_laravel-project/public'),
 
     /*
     |--------------------------------------------------------------------------
