@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ControllerDemo;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('form');
+    return view('index');
 });
+
+Route::get('/login', [ControllerDemo::class, 'login']);
+
+Route::get('/register', [ControllerDemo::class, 'register']);
