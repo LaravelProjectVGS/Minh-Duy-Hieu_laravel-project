@@ -14,4 +14,8 @@ class ControllerDemo extends Controller
     public function register() {
         return view('register');
     }
+
+    public function vgsTour() {
+        return view('vgsTour');
+    }
 }
