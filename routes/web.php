@@ -25,6 +25,8 @@ Route::get('/register', [ControllerDemo::class, 'register']);
 
 Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
 
+Route::get('/vgsTravel_Duy', [ControllerDemo::class, 'vgsTravel_Duy']);
+
 Route::get('test', function(){
    return view('components.content');
 });

@@ -18,4 +18,8 @@ class ControllerDemo extends Controller
     public function vgsTour() {
         return view('vgsTour');
     }
+
+    public function vgsTravel_Duy(){
+        return view('vgsTravel_Duy');
+    }
 }
