@@ -28,3 +28,7 @@ Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
 Route::get('test', function(){
    return view('components.content');
 });
+
+Route::get('fileview', function () {
+    return view('fileview.fileview');
+});
