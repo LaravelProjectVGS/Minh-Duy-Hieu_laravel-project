@@ -17,6 +17,7 @@ class CreatePagesTable extends Migration
             $table->id();
             $table->string('title');
             $table->datetime('created');
+            $table->string('author');
             $table->string('status');
         });
     }

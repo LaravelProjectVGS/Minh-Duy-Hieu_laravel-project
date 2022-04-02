@@ -25,6 +25,7 @@ class PagesController extends Controller
 
         $page = ([
             'title'  => $request->title,
+            'created' => Carbon::now(),
             'status' => $request->status,
             'author' => $request->author,
         ]);
