@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pages;
 use Illuminate\Http\Request;
-use App\Models\Page;
 use App\Models\Test;
 use Carbon\Carbon;
 
-class ControllerDemo extends Controller
+class PagesController extends Controller
 {
-    //
     public function createpage() {
-        $listPage = Page::get();
+        $listPage = Pages::get();
+        
         
         return view(('page.createpage'), ['pages'=>$listPage]);
     }
@@ -29,7 +29,7 @@ class ControllerDemo extends Controller
             'author' => $request->author,
         ]);
 
-        Page::insert($page);
+        Pages::insert($page);
         return redirect('/')->withSuccess('Create Page Success.');
     }
 
@@ -50,7 +50,7 @@ class ControllerDemo extends Controller
     }
 
     public function showEditPage(Request $request) {
-        $page = Page::where('id', '=', $request->id)->first();
+        $page = Pages::where('id', '=', $request->id)->first();
         return view(('page.editPage'), ['page'=>$page]);
     }
     public function doEditPage(Request $request) {
@@ -60,7 +60,7 @@ class ControllerDemo extends Controller
             'author' => 'required',
         ]);
 
-        $page = Page::where('id', '=', $request->id)->first();
+        $page = Pages::where('id', '=', $request->id)->first();
         $page->title = $request->title;
         $page->created = Carbon::now('Asia/Ho_Chi_Minh');
         $page->status = $request->status;
@@ -72,7 +72,7 @@ class ControllerDemo extends Controller
     }
 
     public function deletePage(Request $request) {
-        $page = Page::where('id', '=', $request->id)->first();
+        $page = Pages::where('id', '=', $request->id)->first();
 
         $page->delete();
         return redirect('/')->withSuccess('Delete Page Success.');

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerDemo;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,22 +15,22 @@ use App\Http\Controllers\ControllerDemo;
 */
 
 
-Route::get('/', [ControllerDemo::class, 'createpage']);
-Route::post('/docreatepage', [ControllerDemo::class, 'docreatepage']);
+Route::get('/', [PagesController::class, 'createpage']);
+Route::post('/docreatepage', [PagesController::class, 'docreatepage']);
 
-Route::get('/login', [ControllerDemo::class, 'login']);
+Route::get('/login', [PagesController::class, 'login']);
 
-Route::get('/register', [ControllerDemo::class, 'register']);
+Route::get('/register', [PagesController::class, 'register']);
 
-Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
+Route::get('/vgsTour', [PagesController::class, 'vgsTour']);
 
-Route::get('/vgsTravel', [ControllerDemo::class, 'vgsTravel']);
+Route::get('/vgsTravel', [PagesController::class, 'vgsTravel']);
 
 Route::get('/add', function(){
    return view('page.addnewPage');
 });
 
-Route::get('/edit/{id}', [ControllerDemo::class, 'showEditPage']);
-Route::post('/edit/{id}', [ControllerDemo::class, 'doEditPage']);
+Route::get('/edit/{id}', [PagesController::class, 'showEditPage']);
+Route::post('/edit/{id}', [PagesController::class, 'doEditPage']);
 
-Route::get('/delete/{id}', [ControllerDemo::class, 'deletePage']);
+Route::get('/delete/{id}', [PagesController::class, 'deletePage']);
