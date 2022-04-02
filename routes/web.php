@@ -15,9 +15,8 @@ use App\Http\Controllers\ControllerDemo;
 */
 
 
-Route::get('/', function () {
-    return view('page.createpage');
-});
+Route::get('/', [ControllerDemo::class, 'createpage']);
+Route::post('/docreatepage', [ControllerDemo::class, 'docreatepage']);
 
 Route::get('/login', [ControllerDemo::class, 'login']);
 
@@ -27,6 +26,11 @@ Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
 
 Route::get('/vgsTravel', [ControllerDemo::class, 'vgsTravel']);
 
-Route::get('test', function(){
-   return view('components.content');
+Route::get('/add', function(){
+   return view('page.addnewPage');
 });
+
+Route::get('/edit/{id}', [ControllerDemo::class, 'showEditPage']);
+Route::post('/edit/{id}', [ControllerDemo::class, 'doEditPage']);
+
+Route::get('/delete/{id}', [ControllerDemo::class, 'deletePage']);

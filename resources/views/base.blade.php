@@ -69,7 +69,7 @@
                 <a href="#" class="nav-link dot"><img src="{{asset('images/home.svg')}}" alt=""> View site</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link dot"><img src="{{asset('images/file-plus.svg')}}" alt="">Create page</a>
+                <a href="{{url('google.com')}}" class="nav-link dot"><img src="{{asset('images/file-plus.svg')}}" alt="">Create page</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dot"><img src="{{asset('images/pen-tool.svg')}}" alt="">Blog articles</a>
