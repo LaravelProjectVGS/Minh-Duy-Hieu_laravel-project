@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerDemo;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +16,20 @@ use App\Http\Controllers\ControllerDemo;
 |
 */
 
+// Route::get('/blog', [BlogController::class, 'index']);
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/todo/create', [TodoController::class, 'create']);
 
-Route::get('/login', [ControllerDemo::class, 'login']);
+Route::post('/todo', [TodoController::class, 'store']);
 
-Route::get('/register', [ControllerDemo::class, 'register']);
+Route::get('/todo/{id}/edit', [TodoController::class, 'edit']);
 
-Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
+Route::put('/todo/{id}', [TodoController::class, 'update']);
+
+Route::delete('/todo/{id}', [TodoController::class, 'destroy']);
 
 Route::get('/vgsTravel_Duy', [ControllerDemo::class, 'vgsTravel_Duy']);
 
-Route::get('test', function(){
-   return view('components.content');
-});
+Route::get('/layout', [ControllerDemo::class, 'layout']);
+
+Route::resource('/todo', TodoController::class);
