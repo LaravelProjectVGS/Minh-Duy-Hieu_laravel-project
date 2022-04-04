@@ -11,10 +11,13 @@
     <table class="table pc-show">
         <thead class="pc-show">
             <tr class="">
-                <th><span class="title-text page">Page title</span></th>
+                <th><span class="title-text page">Title</span></th>
+                <th><span class="title-text created">Time</span></th>
                 <th><span class="title-text created">Created</span></th>
-                <th><span class="title-text status">Status</span></th>
-                <th><span class="title-text author">Author</span></th>
+                <th><span class="title-text created">Start</span></th>
+                <th><span class="title-text status">Price</span></th>
+                <th><span class="title-text author">Image</span></th>
+                <th><span class="title-text author">Status</span></th>
                 <th class="addnew">
                     <button class="btn-add">
                         <img src="{{asset('images/file-plus2.svg')}}" class="btn-file-plus" alt="">
@@ -28,20 +31,19 @@
         </thead>
         <tbody>
            
-            @foreach($pages as $page)
+            @foreach($tours as $tour)
                 <tr class="pc-show">
-                    <td><span class="page-item page-title">{{$page->title}}</span></td>
-                    <td><span class="page-item page-created">{{$page->created}}</span></td>
-                    @if($page->status == 'Published')
-                        <td><div class="container-status "><button class="page-item page-status"><span>{{$page->status}}</span></button></div></td>
-                    @elseif($page->status == 'Private')
-                        <td><div class="container-status "><button class="private page-item page-status"><span>{{$page->status}}</span></button></div></td>
+                    <td><span class="page-item page-title">{{$tour->title}}</span></td>
+                    <td><span class="page-item page-created">{{$tour->time}}</span></td>
+                    <td><span class="page-item page-created">{{$tour->created}}</span></td>
+                    <td><span class="page-item page-created">{{$tour->start}}</span></td>
+                    <td><span class="page-item page-created">{{$tour->price}}</span></td>
+                    <td><span class="page-item page-created">{{$tour->img}}</span></td>
+                    @if($tour->status == 'Published')
+                        <td><div class="container-status "><button class="page-item page-status"><span>{{$tour->status}}</span></button></div></td>
+                    @elseif($tour->status == 'Private')
+                        <td><div class="container-status "><button class="private page-item page-status"><span>{{$tour->status}}</span></button></div></td>
                     @endif
-                    <td>
-                        <span class="page-item page-author">{{$page->author}}
-                            <div class="container-status pd"><button class="page-item page-access"><span>Admin</span></button></div>
-                        </span>
-                    </td>
                     <td>
                         <div class="container-statu show dropdown">
                             <span class="page-item page-spread">
@@ -49,11 +51,11 @@
                             </span>
                             <div class="manage-hover dropdown-content">
                                 <div class="manage-title"><span class="">Manage</span></div>
-                                <a href="{{url('/edit/'.$page->id)}}" class="edit">
+                                <a href="{{url('/edit/'.$tour->id)}}" class="edit">
                                     <img src="{{asset('images/edit.svg')}}" alt="">
                                     <span>Edit file name</span>
                                 </a>
-                                <a href="{{url('/delete/'.$page->id)}}" class="trash">
+                                <a href="{{url('/delete/'.$tour->id)}}" class="trash">
                                     <img src="{{asset('images/trash-3.svg')}}" alt="">
                                     <span>Delete file</span>
                                 </a>

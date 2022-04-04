@@ -310,78 +310,6 @@
             </div>
         </div>
 
-        <!-- slide truoc -->
-        <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="display;">
-            <div class="carousel-inner" style="padding-top: 70px;">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="https://vgstravel.com/img/slide/13-10-2021/origin/origin-131909-1634118109-27-1.jpg"
-                        class="d-block" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="inner-carousel">
-                        <span class="text title">THOẢI MÁI VI VU DU LỊCH QUỐC TẾ</span>
-                        <span class="text noi-dung">Lịch trình ấn tượng chỉ có tại VGS Travel !</span>
-                        <div class="button">
-                            <a class="" href="https://www.facebook.com/vgstravelvn" tabindex="0">
-                                <div class="css-1izq7si">Chi Tiết</div>
-                            </a>
-                        </div>
-                    </div>
-                    <img style="object-fit:cover"  src="https://vgstravel.com/img/slide/20-11-2021/origin/origin-175198-1637401655-36-Golfplatz-min-cover-mobile.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://vgstravel.com/img/slide/16-12-2021/origin/origin-18773-1639642819-27-56e1d7f4829548cb1184.jpg"
-                        class="d-block" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
-        <!-- slide sau -->
-        <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="display: ;">
-            <div class="carousel-inner" style="padding-top: 70px;">
-                
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="inner-carousel">
-                    </div>
-                    <img style="object-fit:cover"  src="https://vgstravel.com/img/slide/20-11-2021/origin/origin-400268-1637395749-36-b7afa5b5ffe334bd6df2.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="inner-carousel">
-                        <span class="text title">THOẢI MÁI VI VU DU LỊCH QUỐC TẾ</span>
-                        <span class="text noi-dung">Lịch trình ấn tượng chỉ có tại VGS Travel !</span>
-                        <div class="button">
-                            <a class="" href="https://www.facebook.com/vgstravelvn" tabindex="0">
-                                <div class="css-1izq7si">Chi Tiết</div>
-                            </a>
-                        </div>
-                    </div>
-                    <img style="object-fit:cover"  src="https://vgstravel.com/img/slide/20-11-2021/origin/origin-175198-1637401655-36-Golfplatz-min-cover-mobile.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
-
         <div class="title-highlight">
             <h2>TOUR NỔI BẬT</h2>
             <p style="text-align: center;">Vi vu du lịch golf quốc tế với lịch trình và trải nghiệm độc đáo chỉ có tại
@@ -481,7 +409,8 @@
         <div class="tour">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-3" style="display: flex;
+                    
+                    <!-- <div class="col-12 col-sm-6 col-md-3" style="display: flex;
                     justify-content: center;">
                         <div class="card-item card-item-1">
                             <img src="https://vgstravel.com/img/tour/23-10-2021/thumbnail/thumbnail-343874-1634984901-27-Hand-Luggage-Only-12.jpg"
@@ -547,10 +476,32 @@
                                 <button>Chi Tiết</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    @foreach($tours as $tour)
+                        <div class="col-12 col-sm-6 col-md-3" style="display: flex;
+                        justify-content: center;">
+                            <div class="card-item card-item-1">
+                                <img src="{{asset('images/').'/'.$tour->img}}" alt="">
+                                @if($tour->status == 'Published')
+                                    <div class="hot">
+                                        <p>Đang nhận khách</p>
+                                    </div>
+                                @endif
+                                <div class="card-item-title">
+                                    <h3>{{$tour->title}}</h3>
+                                </div>
+                                <div class="card-item-hide">
+                                    <p>Thời gian: {{$tour->time}}</p>
+                                    <p>Ngày khởi hành: {{$tour->start}}</p>
+                                    <p>Giá Tour: {{$tour->price}}</p>
+                                    <button>Chi Tiết</button>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-12 col-sm-6 col-md-3" style="display: flex;
                     justify-content: center;">
                         <div class="card-item card-item-2">
@@ -691,7 +642,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 

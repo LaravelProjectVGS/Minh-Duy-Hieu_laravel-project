@@ -34,3 +34,9 @@ Route::get('/edit/{id}', [PagesController::class, 'showEditPage']);
 Route::post('/edit/{id}', [PagesController::class, 'doEditPage']);
 
 Route::get('/delete/{id}', [PagesController::class, 'deletePage']);
+
+Route::get('/upload', [PagesController::class, 'uploadImg']);
+Route::post('/upload', [PagesController::class, 'imageUploadPost']);
+
+Route::get('/edit/{id}/editimg', [PagesController::class, 'editImg']);
+Route::post('/edit/{id}/editimg', [PagesController::class, 'imageEditPost']);

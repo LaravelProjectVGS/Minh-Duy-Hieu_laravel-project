@@ -681,7 +681,7 @@ tbody tr {
 
 .con {
   width: 100%;
-  background-color: rgb(247 250 252);
+  /* background-color: rgb(247 250 252); */
 }
 
 .container {
@@ -719,6 +719,7 @@ form {
 
 .form-login {
   /* height: calc(100% - 34px); */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .text-email {
@@ -732,7 +733,7 @@ form {
   line-height: 23px;
   color: #2A4365;
   cursor: pointer;
-  padding-bottom: 21px;
+  padding-top: 21px;
 }
 
 .text-password {
@@ -779,10 +780,15 @@ form {
   margin-top: 22px;
 }
 
+.btn {
+  width: 100%;
+}
+
 .btn-signin {
+  
   box-sizing: border-box;
   font-size: 20px;
-  width: 210px;
+  width: 100%;
   height: 61px;
   background-color: #2A4365;
   color: #fff;
