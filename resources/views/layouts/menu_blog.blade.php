@@ -49,7 +49,10 @@
                             <p>{{ $item->head }}</p>
                         </td>
                         <td data-label="Description">
-                            <p>{{ $item->content }}</p>
+                            <p id="toHtml" style=" -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            display: -webkit-box;">{{ $item->content }}</p>
                         </td>
                         <td data-label="">
                             <div class="info dropdown-info">

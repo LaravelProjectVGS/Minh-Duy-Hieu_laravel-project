@@ -9,7 +9,7 @@ class ControllerDemo extends Controller
 
     public function vgsTravel_Duy()
     {
-        return view('vgsTravel_Duy');
+        return view('');
     }
 
     // public function blog(){
@@ -18,7 +18,7 @@ class ControllerDemo extends Controller
 
     public function layout()
     {
-        return view('components.content');
+        return view('blogVgs_components.itemBlog');
     }
 
     public function createBlog()

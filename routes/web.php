@@ -38,6 +38,7 @@ Route::resource('/todo', TodoController::class);
 
 Route::resource('/blogVgs', BlogVgsController::class);
 Route::get('/vgsTravel_Duy', [BlogVgsController::class, 'getData']);
+Route::get('/show/{id}', [BlogVgsController::class, 'show']);
 Route::get('/blogVgs/create', [BlogVgsController::class, 'create']);
 Route::post('/blogVgs', [BlogVgsController::class, 'store']);
 

@@ -44,6 +44,14 @@
 </body>
 
 <script>
+    console.log("helloo");
+    var toHtml = document.querySelectorAll('#toHtml');
+    toHtml.forEach(item => {
+        var test = item.textContent;
+        item.innerHTML = test;
+    })
+
+    console.log("hello");
     document.getElementById('travel').style.display = "block";
 
     function openCity(evt, cityName) {

@@ -869,8 +869,11 @@
                         <!-- Tab content -->
                         <div id="travel" class="tabcontent" style="padding: 0 15px;">
                             <div class="travel-experience">
-                                <div class="row mb-5">
-                                    @if (count($isHeadKinhNghiemDuLichs) > 0)
+                                @if (count($isHeadKinhNghiemDuLichs) > 0)
+                                    <a href="{{ route('blogVgs.show', $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->id) }}"
+                                        class="
+                                      row mb-5">
+
                                         <div class="col-12 col-md-4 p-0">
                                             <img src="{{ asset('uploads/blog_image/' . $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->profile_image) }}"
                                                 alt="">
@@ -878,25 +881,33 @@
                                         <div class="col-12 col-md-8">
                                             <h4>{{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->title }}
                                             </h4>
-                                            <p>{{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->content }}
+                                            <p style=" -webkit-line-clamp: 6;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            display: -webkit-box;" id="toHtml">
+                                                {{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->content }}
                                             </p>
                                         </div>
-                                    @endif
-
-                                </div>
+                                    </a>
+                                @endif
                                 <div class="row">
                                     @foreach ($kinhNghiemDuLichs as $kinhNghiemDuLich)
-                                        <div class="col-12 col-md-4 space">
+                                        <a href="{{ route('blogVgs.show', $kinhNghiemDuLich->id) }}"
+                                            class="col-12 col-md-4 space">
                                             <div class="row bg-den">
                                                 <div class="col-12 col-md-4 boi-den">
                                                     <img src="{{ asset('uploads/blog_image/' . $kinhNghiemDuLich->profile_image) }}"
                                                         alt="">
                                                 </div>
                                                 <div class="col-12 col-md-8  test">
-                                                    <p>{{ $kinhNghiemDuLich->content }}</p>
+                                                    <p style=" -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;" id="toHtml">
+                                                        {{ $kinhNghiemDuLich->content }}</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     @endforeach
                                 </div>
                             </div>
@@ -904,8 +915,10 @@
 
                         <div id="culinary" class="tabcontent" style="padding: 0 15px;">
                             <div class="culinary-experience">
-                                <div class="row mb-5">
-                                    @if (count($isHeadTraiNghiemAmThucs) > 0)
+                                @if (count($isHeadTraiNghiemAmThucs) > 0)
+                                    <a href="{{ route('blogVgs.show', $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->id) }}"
+                                        class="row mb-5">
+
                                         <div class="col-12 col-md-4 p-0">
                                             <img src="{{ asset('uploads/blog_image/' . $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->profile_image) }}"
                                                 alt="">
@@ -913,25 +926,35 @@
                                         <div class="col-12 col-md-8 p-0">
                                             <h4>{{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->title }}
                                             </h4>
-                                            <p>{{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->content }}
+                                            <p style=" -webkit-line-clamp: 6;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            display: -webkit-box;" id="toHtml">
+                                                {{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->content }}
                                             </p>
                                         </div>
-                                    @endif
 
-                                </div>
+
+                                    </a>
+                                @endif
                                 <div class="row">
                                     @foreach ($traiNghiemAmThucs as $traiNghiemAmThuc)
-                                        <div class="col-12 col-md-4 space">
+                                        <a href="{{ route('blogVgs.show', $traiNghiemAmThuc->id) }}"
+                                            class="col-12 col-md-4 space">
                                             <div class="row bg-den">
                                                 <div class="col-12 col-md-4 boi-den">
                                                     <img src="{{ asset('uploads/blog_image/' . $traiNghiemAmThuc->profile_image) }}"
                                                         alt="">
                                                 </div>
                                                 <div class="col-12 col-md-8  test">
-                                                    <p>{{ $traiNghiemAmThuc->content }}</p>
+                                                    <p style=" -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;" id="toHtml">
+                                                        {{ $traiNghiemAmThuc->content }}</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     @endforeach
                                 </div>
 
@@ -941,32 +964,43 @@
 
                         <div id="news" class="tabcontent" style="padding: 0 15px;">
                             <div class="news-events">
-                                <div class="row mb-5">
-                                    @if (count($isHeadVeMayBays) > 0)
+                                @if (count($isHeadVeMayBays) > 0)
+                                    <a href="{{ route('blogVgs.show', $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->id) }}"
+                                        class="row mb-5">
+
                                         <div class="col-12 col-md-4 p-0">
                                             <img src="{{ asset('uploads/blog_image/' . $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->profile_image) }}"
                                                 alt="">
                                         </div>
                                         <div class="col-12 col-md-8 p-0">
                                             <h4>{{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->title }}</h4>
-                                            <p>{{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->content }}</p>
+                                            <p style=" -webkit-line-clamp: 6;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            display: -webkit-box;" id="toHtml">
+                                                {{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->content }}</p>
                                         </div>
-                                    @endif
 
-                                </div>
+
+                                    </a>
+                                @endif
                                 <div class="row">
                                     @foreach ($veMayBays as $veMayBay)
-                                        <div class="col-12 col-md-4 space">
+                                        <a href="{{ route('blogVgs.show', $veMayBay->id) }}"
+                                            class="col-12 col-md-4 space">
                                             <div class="row bg-den">
                                                 <div class="col-12 col-md-4 boi-den">
                                                     <img src="{{ asset('uploads/blog_image/' . $veMayBay->profile_image) }}"
                                                         alt="">
                                                 </div>
                                                 <div class="col-12 col-md-8  test">
-                                                    <p>{{ $veMayBay->content }}</p>
+                                                    <p style=" -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;" id="toHtml">{{ $veMayBay->content }}</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     @endforeach
                                 </div>
                             </div>
@@ -974,8 +1008,10 @@
 
                         <div id="news2" class="tabcontent" style="padding: 0 15px;">
                             <div class="news-events">
-                                <div class="row mb-5">
-                                    @if (count($isHeadTinTucVaSuKiens) > 0)
+                                @if (count($isHeadTinTucVaSuKiens) > 0)
+                                    <a href="{{ route('blogVgs.show', $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->id) }}"
+                                        class="row mb-5">
+
                                         <div class="col-12 col-md-4 p-0">
                                             <img src="{{ asset('uploads/blog_image/' . $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->profile_image) }}"
                                                 alt="">
@@ -983,25 +1019,35 @@
                                         <div class="col-12 col-md-8 p-0">
                                             <h4>{{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->title }}
                                             </h4>
-                                            <p>{{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->content }}
+                                            <p style=" -webkit-line-clamp: 6;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            display: -webkit-box;" id="toHtml">
+                                                {{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->content }}
                                             </p>
                                         </div>
-                                    @endif
 
-                                </div>
+
+                                    </a>
+                                @endif
                                 <div class="row">
                                     @foreach ($tinTucVaSuKiens as $tinTucVaSuKien)
-                                        <div class="col-12 col-md-4 space">
+                                        <a href="{{ route('blogVgs.show', $tinTucVaSuKien->id) }}"
+                                            class="col-12 col-md-4 space">
                                             <div class="row bg-den">
                                                 <div class="col-12 col-md-4 boi-den">
                                                     <img src="{{ asset('uploads/blog_image/' . $tinTucVaSuKien->profile_image) }}"
                                                         alt="">
                                                 </div>
                                                 <div class="col-12 col-md-8  test">
-                                                    <p>{{ $tinTucVaSuKien->content }}</p>
+                                                    <p style=" -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;" id="toHtml">
+                                                        {{ $tinTucVaSuKien->content }}</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     @endforeach
                                 </div>
                             </div>
@@ -1017,24 +1063,30 @@
                         <div style="padding: 0 15px;">
                             <div class="row">
                                 @if (count($isHeadBaiVietNoiBats) > 0)
-                                    <div class="feather">
+                                    <a href="{{ route('blogVgs.show', $isHeadBaiVietNoiBats[count($isHeadBaiVietNoiBats) - 1]->id) }}"
+                                        class="feather">
                                         <img src="{{ asset('uploads/blog_image/' . $isHeadBaiVietNoiBats[count($isHeadBaiVietNoiBats) - 1]->profile_image) }}"
                                             alt="">
                                         <h5
                                             style="color: white; overflow: hidden; position: absolute; text-align: center; top: 40px; padding: 0 30px;">
                                             {{ $isHeadBaiVietNoiBats[count($isHeadBaiVietNoiBats) - 1]->title }}</h5>
-                                    </div>
+                                    </a>
                                 @endif
 
                             </div>
                             @foreach ($baiVietNoiBats as $baiVietNoiBat)
-                                <div class="row mb-3  bg-feather">
+                                <a href="{{ route('blogVgs.show', $baiVietNoiBat->id) }}"
+                                    class="row mb-3  bg-feather">
                                     <div class="col-12 col-md-4 boi-den">
                                         <img src="{{ asset('uploads/blog_image/' . $baiVietNoiBat->profile_image) }}"
                                             alt="">
                                     </div>
-                                    <div class="col-12 col-md-8 test">{{ $baiVietNoiBat->content }}</div>
-                                </div>
+                                    <div class="col-12 col-md-8 test" id="toHtml" style=" -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    display: -webkit-box;">{{ $baiVietNoiBat->content }}
+                                    </div>
+                                </a>
                             @endforeach
 
                         </div>

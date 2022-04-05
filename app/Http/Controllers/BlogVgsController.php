@@ -81,9 +81,17 @@ class BlogVgsController extends Controller
      * @param  \App\Models\BlogVgs  $blogVgs
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogVgs $blogVgs)
+    public function show($id)
     {
-        //
+
+        $kinhNghiemDuLichs = DB::select("select * from blog_vgs where options='kinh nghiệm du lịch'");
+        $traiNghiemAmThucs = DB::select("select * from blog_vgs where options='trải nghiệm ẩm thực'");
+        $veMayBays = DB::select("select * from blog_vgs where options='vé máy bay' and head is null;");
+        $tinTucVaSuKiens = DB::select("select * from blog_vgs where options='tin tức và sự kiện'");
+        $baiVietNoiBats = DB::select("select * from blog_vgs where options='bài viết nổi bật'");
+        $newItems = DB::select("SELECT * FROM blog_vgs ORDER BY id DESC LIMIT 6;");
+        $item = BlogVgs::find($id);
+        return view('blogVgs_components.itemBlog', compact('item', 'newItems', 'kinhNghiemDuLichs', 'traiNghiemAmThucs', 'veMayBays', 'tinTucVaSuKiens', 'baiVietNoiBats'));
     }
 
     /**
@@ -153,5 +161,9 @@ class BlogVgsController extends Controller
         $isHeadTinTucVaSuKiens = DB::select("select * from blog_vgs where options='tin tức và sự kiện' and head = 'on';");
         $isHeadBaiVietNoiBats = DB::select("select * from blog_vgs where options='bài viết nổi bật' and head = 'on';");
         return view('vgsTravel_Duy', compact('kinhNghiemDuLichs', 'traiNghiemAmThucs', 'veMayBays', 'tinTucVaSuKiens', 'baiVietNoiBats', 'isHeadKinhNghiemDuLichs', 'isHeadTraiNghiemAmThucs', 'isHeadVeMayBays', 'isHeadTinTucVaSuKiens', 'isHeadBaiVietNoiBats'));
+    }
+
+    public function itemBlog($id)
+    {
     }
 }

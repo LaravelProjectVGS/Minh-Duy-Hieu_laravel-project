@@ -66,24 +66,24 @@ $('.slide-res').slick({
     prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
     responsive: [{
-            breakpoint: 900,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
 
-            }
-        },
-        {
-            breakpoint: 550,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3000,
-            }
         }
+    },
+    {
+        breakpoint: 550,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        }
+    }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
@@ -142,14 +142,14 @@ var check = true
 
 liMenuRespons.forEach((liMenuRespon, index) => {
     liMenuRespon.addEventListener('click', () => {
-        if(check){
+        if (check) {
             rows[index].classList.remove('quayxuong')
             rows[index].classList.add('quaylen')
-            check=false
+            check = false
         } else {
             rows[index].classList.remove('quaylen')
             rows[index].classList.add('quayxuong')
-            check=true
+            check = true
         }
     })
 })
@@ -159,4 +159,11 @@ var exit = document.querySelector('.exit')
 
 exit.addEventListener('click', () => {
     help.classList.add('help-hide')
+})
+
+
+var toHtml = document.querySelectorAll('#toHtml');
+toHtml.forEach(item => {
+    var test = item.textContent;
+    item.innerHTML = test;
 })
