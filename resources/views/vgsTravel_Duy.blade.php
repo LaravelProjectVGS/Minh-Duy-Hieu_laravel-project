@@ -885,7 +885,7 @@
                                             -webkit-box-orient: vertical;
                                             overflow: hidden;
                                             display: -webkit-box;" id="toHtml">
-                                                {{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->content }}
+                                                {{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->description }}
                                             </p>
                                         </div>
                                     </a>
@@ -904,7 +904,7 @@
                                                     -webkit-box-orient: vertical;
                                                     overflow: hidden;
                                                     display: -webkit-box;" id="toHtml">
-                                                        {{ $kinhNghiemDuLich->content }}</p>
+                                                        {{ $kinhNghiemDuLich->description }}</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -930,7 +930,7 @@
                                             -webkit-box-orient: vertical;
                                             overflow: hidden;
                                             display: -webkit-box;" id="toHtml">
-                                                {{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->content }}
+                                                {{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->description }}
                                             </p>
                                         </div>
 
@@ -951,7 +951,7 @@
                                                     -webkit-box-orient: vertical;
                                                     overflow: hidden;
                                                     display: -webkit-box;" id="toHtml">
-                                                        {{ $traiNghiemAmThuc->content }}</p>
+                                                        {{ $traiNghiemAmThuc->description }}</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -978,7 +978,7 @@
                                             -webkit-box-orient: vertical;
                                             overflow: hidden;
                                             display: -webkit-box;" id="toHtml">
-                                                {{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->content }}</p>
+                                                {{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->description }}</p>
                                         </div>
 
 
@@ -997,7 +997,8 @@
                                                     <p style=" -webkit-line-clamp: 2;
                                                     -webkit-box-orient: vertical;
                                                     overflow: hidden;
-                                                    display: -webkit-box;" id="toHtml">{{ $veMayBay->content }}</p>
+                                                    display: -webkit-box;" id="toHtml">{{ $veMayBay->description }}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -1023,7 +1024,7 @@
                                             -webkit-box-orient: vertical;
                                             overflow: hidden;
                                             display: -webkit-box;" id="toHtml">
-                                                {{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->content }}
+                                                {{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->description }}
                                             </p>
                                         </div>
 
@@ -1044,7 +1045,7 @@
                                                     -webkit-box-orient: vertical;
                                                     overflow: hidden;
                                                     display: -webkit-box;" id="toHtml">
-                                                        {{ $tinTucVaSuKien->content }}</p>
+                                                        {{ $tinTucVaSuKien->description }}</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -1084,7 +1085,7 @@
                                     <div class="col-12 col-md-8 test" id="toHtml" style=" -webkit-line-clamp: 2;
                                     -webkit-box-orient: vertical;
                                     overflow: hidden;
-                                    display: -webkit-box;">{{ $baiVietNoiBat->content }}
+                                    display: -webkit-box;">{{ $baiVietNoiBat->description }}
                                     </div>
                                 </a>
                             @endforeach

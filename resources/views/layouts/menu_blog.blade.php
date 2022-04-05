@@ -4,20 +4,23 @@
         <table class="table">
             <thead>
                 <tr class="name-title">
-                    <th scope="col" class="tieu-de">
+                    <th width="30%" scope="col" class="tieu-de">
                         Title
                     </th>
-                    <th scope="col" class="tieu-de">
+                    <th width="10%" scope="col" class="tieu-de">
                         Option
                     </th>
-                    <th scope="col" class="tieu-de">
+                    <th width="5%" scope="col" class="tieu-de">
                         Image
                     </th>
-                    <th scope="col" class="tieu-de">
+                    <th width="5%" scope="col" class="tieu-de">
                         isHead
                     </th>
-                    <th scope="col" class="tieu-de">
+                    <th width="30%" scope="col" class="tieu-de">
                         Description
+                    </th>
+                    <th width="20%" scope="col" class="tieu-de">
+                        Content
                     </th>
                     <th scope="col" class="tieu-de add-new p4 bg-dark">
                         <a href="{{ url('/blogVgs/create') }}"
@@ -49,6 +52,12 @@
                             <p>{{ $item->head }}</p>
                         </td>
                         <td data-label="Description">
+                            <p style="-webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            display: -webkit-box;">{{ $item->description }}</p>
+                        </td>
+                        <td data-label="Content">
                             <p id="toHtml" style=" -webkit-line-clamp: 5;
                             -webkit-box-orient: vertical;
                             overflow: hidden;
@@ -90,7 +99,15 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ url('/vgsTravel_Duy') }}">Update</a>
+        <a href="{{ url('/vgsTravel_Duy') }}" style="    margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        background: black;
+        width: 81px;
+        align-items: center;
+        border-radius: 6px;
+        color: white;">Update</a>
     </div>
 
     <div class="numbers">

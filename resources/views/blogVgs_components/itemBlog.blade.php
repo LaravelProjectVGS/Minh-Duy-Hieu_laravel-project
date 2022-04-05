@@ -267,21 +267,28 @@
     <div class="body" style="margin-top: 100px">
         <div class="container">
             <div class="row">
+                <div class="tag" style="display: flex; margin:10px 0 50px 0; font-size:20px">
+                    <div>TRANG CHỦ / </div>
+                    <div style="text-transform: uppercase;">&nbsp;{{ $item->options }}&nbsp;</div>
+                    <div style="color: #c3a30b; font-weight: 200"> / {{ $item->title }}</div>
+                </div>
                 <div class="col-8">
                     <div class="thong tin">
                         <div class="title" style="font-size: 30px;
                         font-weight: 700;
                         margin-bottom: 20px;">{{ $item->title }}</div>
-                        <p class="description" id="toHtml">{{ $item->content }}</p>
+                        <p>{{ $item->description }}</p>
+                        <img src="{{ asset('uploads/blog_image/' . $item->profile_image) }}" alt="">
+                        <p class="" id="toHtml">{{ $item->content }}</p>
                     </div>
-                    <div class="lienquan">
-                        <h3>Tin liên quan</h3>
+                    <div class="lienquan" style="    border: 1px solid #dcdcdc; padding: 10px">
+                        <h5 style="color: #c3a30b; margin-top: 10px">Tin liên quan</h5>
                         @if ($item->options == 'kinh nghiệm du lịch')
                             @foreach ($kinhNghiemDuLichs as $i)
                                 <a href="{{ route('blogVgs.show', $i->id) }}" class="list" style="display: flex; display: flex;
                             height: 90px;
                             padding: 10px 0;
-                            border-bottom: 1px solid;
+                            border-bottom: 1px solid #eee;
                             color: black;
                             margin-bottom: 10px;">
                                     <img src="{{ asset('uploads/blog_image/' . $i->profile_image) }}" alt=""
@@ -294,7 +301,7 @@
                                 <a href="{{ route('blogVgs.show', $i->id) }}" class="list" style="display: flex; display: flex;
                             height: 90px;
                             padding: 10px 0;
-                            border-bottom: 1px solid;
+                            border-bottom: 1px solid #eee;
                             color: black;
                             margin-bottom: 10px;">
                                     <img src="{{ asset('uploads/blog_image/' . $i->profile_image) }}" alt=""
@@ -307,7 +314,7 @@
                                 <a href="{{ route('blogVgs.show', $i->id) }}" class="list" style="display: flex; display: flex;
                             height: 90px;
                             padding: 10px 0;
-                            border-bottom: 1px solid;
+                            border-bottom: 1px solid #eee;
                             color: black;
                             margin-bottom: 10px;">
                                     <img src="{{ asset('uploads/blog_image/' . $i->profile_image) }}" alt=""
@@ -320,7 +327,7 @@
                                 <a href="{{ route('blogVgs.show', $i->id) }}" class="list" style="display: flex; display: flex;
                             height: 90px;
                             padding: 10px 0;
-                            border-bottom: 1px solid;
+                            border-bottom: 1px solid #eee;
                             color: black;
                             margin-bottom: 10px;">
                                     <img src="{{ asset('uploads/blog_image/' . $i->profile_image) }}" alt=""
@@ -333,7 +340,7 @@
                                 <a href="{{ route('blogVgs.show', $i->id) }}" class="list" style="display: flex; display: flex;
                             height: 90px;
                             padding: 10px 0;
-                            border-bottom: 1px solid;
+                            border-bottom: 1px solid #eee;
                             color: black;
                             margin-bottom: 10px;">
                                     <img src="{{ asset('uploads/blog_image/' . $i->profile_image) }}" alt=""
@@ -348,13 +355,30 @@
                     </div>
                 </div>
                 <div class="col-4">
+                    <div class="search-blog" style=" position: relative;">
+                        <input type="text" placeholder="Nhập từ bạn cần tìm?" style="    width: 100%;
+                        padding: 20px 10px;
+                        border-radius: 31px;
+                        padding-left: 20px;
+                        border: none;
+                        margin-bottom: 30px;
+                        background: #f6f6f6;
+                        padding-right: 58px;
+                    }">
+                        <i style="    position: absolute;
+                        top: 27%;
+                        right: 24px;
+                        font-size: 21px;
+                        color: #c3a30b" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                     <div class="new">
-                        <h3>Tin Mới</h3>
+                        <h5 style="color: #c3a30b;    background: #f6f6f6;
+                        padding: 10px 10px;">Tin Mới</h5>
                         @foreach ($newItems as $newItem)
                             <a href="{{ route('blogVgs.show', $newItem->id) }}" class="list" style="display: flex; display: flex;
                         height: 90px;
                         padding: 10px 0;
-                        border-bottom: 1px solid;
+                        border-bottom: 1px solid #eee;
                         color: black;
                         margin-bottom: 10px;">
                                 <img src="{{ asset('uploads/blog_image/' . $newItem->profile_image) }}" alt=""

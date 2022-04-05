@@ -44,21 +44,6 @@ class BlogVgsController extends Controller
      */
     public function store(Request $request)
     {
-        // $item = ([
-        //     'title' => $request->title,
-        //     'options' => $request->options,
-        //     if ($request->hasFile('profile_image')) {
-        //         $file = $request->profile_image;
-        //         $extension = $file->getClientOriginalExtension();
-        //         $filename = time() . '.' . $extension;
-        //         $file->move('uploads/blog_image/', $filename);
-        //         $item->profile_image = $filename;
-        //     }
-
-        //     'head' => $request->head,
-        //     'content' => $request->content,
-        // ]);
-        // BlogVgs::insert($item);
         $item = new BlogVgs;
         $item->title = $request->title;
         $item->options = $request->options;
@@ -70,6 +55,7 @@ class BlogVgsController extends Controller
             $item->profile_image = $filename;
         }
         $item->head = $request->head;
+        $item->description = $request->description;
         $item->content = $request->content;
         $item->save();
         return redirect('blogVgs');
@@ -130,6 +116,7 @@ class BlogVgsController extends Controller
             $item->profile_image = $filename;
         }
         $item->head = $request->head;
+        $item->description = $request->description;
         $item->content = $request->content;
         $item->update();
         return redirect('blogVgs');

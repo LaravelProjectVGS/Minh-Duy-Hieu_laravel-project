@@ -1,6 +1,6 @@
 <div class="body-left">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-    <div class="menu-left">
+    <div class="menu-left" style="height: 100vh">
         <div class="manage">
             <h1>Manage</h1>
             <ul>

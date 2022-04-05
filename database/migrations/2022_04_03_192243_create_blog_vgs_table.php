@@ -19,6 +19,7 @@ class CreateBlogVgsTable extends Migration
             $table->string('options');
             $table->string('profile_image');
             $table->boolean('head');
+            $table->string('description');
             $table->string('content');
             $table->timestamps();
         });
