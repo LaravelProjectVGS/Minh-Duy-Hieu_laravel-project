@@ -20,4 +20,9 @@ class ControllerDemo extends Controller
     {
         return view('components.content');
     }
+
+    public function createBlog()
+    {
+        return view('vgs_tour.createBlog');
+    }
 }

@@ -6,7 +6,7 @@
             <ul>
                 <li>
                     <img srcset="{{ asset('image_blog/home.png') }} 2x" alt="">
-                    <a href="#" class="active">View site</a>
+                    <a href="#" class="active2">View site</a>
                     <img class="chose img-active" style="padding: 0 0 0 20px;"
                         srcset="{{ asset('image_blog/Ellipse.png') }} 2x" alt="">
                 </li>
@@ -19,8 +19,8 @@
                 <li>
                     <img srcset="{{ asset('image_blog/pen-tool.png') }} 2x" alt="">
                     <a href="#">Blog articles</a>
-                    <img class="not-chose img-active" style="padding: 0 0 0 20px;" srcset="{{ asset('image_blog/Ellipse.png') }} 2x"
-                        alt="">
+                    <img class="not-chose img-active" style="padding: 0 0 0 20px;"
+                        srcset="{{ asset('image_blog/Ellipse.png') }} 2x" alt="">
                 </li>
                 <li>
                     <img srcset="{{ asset('image_blog/files.png') }} 2x" alt="">

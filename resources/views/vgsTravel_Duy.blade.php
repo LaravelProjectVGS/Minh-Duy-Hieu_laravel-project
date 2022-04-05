@@ -112,7 +112,8 @@
                 </nav>
             </div>
             <li class="dropdown" style="list-style: none; padding-right: 50px;">
-                <a class="" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     <img class="viet-nam"
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAilBMVEXaJR3//wDZEh7qmRXYAB7ZHR3ZGh3//QDbJhz99AP87gXZEB7++QHbKhzoiBXmfRb0yA3ldhfzww7iYxnwtRDurBH54QjhXhnjbhjdPBvxuQ/eRhvcNRzpkxT42grpjhX20gzjaRjgVRrspBTfTRr76QflehfuqhH43Qn21Av1zAzwtw/rnRPhYBkDKDW4AAAED0lEQVR4nO3d6VbqMBQFYBJOwlAUEZmEgkwq6H3/17tAKXRIoAyu0pP9/RVd7bE7bdMTWioBAAAAAAAAAAAAAAAAAAAAAAAAwNFT3hvweOiV8t6ER6MGYqDy3ogHI8uiLPPeiAdDXfGN8MSokRBihPBESX9TEx/hiaLxpiZjhCeqKraqeW/GI5GTXU0mCM8RrXY1WSE8R0F0EJ4I+byvyTPCE6KPfU0+EJ6QEiFcte3J5qEmTYQnQOtDTdYIT4DEEWqyo5uRmjR13pvzEOglUpMXHChbUkRhkN3QrVhNWgjPdnI6VhNMVW94lVhNKl7eG5Q/3RdxfYQnER2EZ4MqiZpUnK+JnoqkqevhofdUTd5dP1CokapJzfGaqHaqJEK03Z5F8d4MNXlz+xKFaoaauB0eNTOURIiZy+ExRsfx8Bij43Z4LNHhGR4lM6GOpSYdyvYHClQ61ZqXs/DrlprU/Uy/P28VqCj6x7Kz9/VTqDsjmiZvd++vMi3YUCxLqz8uyapavOls8v+0JD4VaCw5oIVtCL1dfVGw3ISUYXLkPl69Ih4kAfr8k5J8FvQgCchR9+4V6Y4KfjukaH7nknwVcnCNo156evF6jV6hcxPSen1+XzNa60Jdup5Az+f3NpMJi4Mk4A2Xd6jIcljwwTVOkXlG7RI/DAbXOOrfdldY6TPKTUhWxzeUZPxUvDu+DBSVry7JL7vchGhmnpM+pzZjmJuQ9pLdJlm8SC4XJWbUPF+DhCbjgyTgDS67K+wOWF2UmCnrEwyTDtvBNY7aWYfaWtGmoa+X6uuzcajfT2eODu8TToTOPiP56UpRYgsxTnNmmYaXuSRCOHAi3kosxDjNkWUamc86W46ceVLd5Ke40WmeWohxmhPLNC58YOpEp7mhm/yUhgM1MSzEOM2BZRoX9xo4EJ4Lo+NCeFTPejzYftDjPoNi6SYXtQUtLLMq7DvNLd3kr54uKcsENvdOc0t09tPQlgls5uHxTHOxx8Yjz9jW1OEdHjK0QkYbjxR9pT9QZx0ew0KMRju+x/QvfbLmuEzjwEsdBR8qeZmqVaqt6YtzeFLR8U2xoIlD4VHDxL5aGo+8YaJ2Q77h8eJ9oe/WZ3zJDuw53/BQrKutdSoRFJu0XbINTyw632caj2T124XweL+RNJx9Nq4o8vFfruGhw0VqtsajSFtTl2l41CDcw6yNR1oenhgyfSGADFv8nrP/0w8d2ExfCLCPzvKixiNvsGQcnt3X+gvxdmHjUdjWxPKFALuv9b+mGzpYl8vyhQC0ud4Yq2v2TOqVYPk2jW10ytc27G3X5TIMjyw3blj/SosGwzOP9vUt/2i1+f27bcvDuHWXGJYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAmf/IgiyXNAAkFQAAAABJRU5ErkJggg=="
                         alt="">
@@ -718,7 +719,8 @@
                                         </div>
                                     </div>
 
-                                    <p id="show-text" class="card-text">Trong hành trình du lịch golf 10 ngày tại Thổ
+                                    <p id="show-text" class="card-text">Trong hành trình du lịch golf 10 ngày tại
+                                        Thổ
                                         Nhĩ
                                         Kỳ, VGS Travel đã
                                         cho tôi trải nghiệm những sân golf mà tôi đánh giá cực kỳ chất lượng và thử
@@ -750,7 +752,8 @@
                                             <i class="fa-solid fa-star"></i>
                                         </div>
                                     </div>
-                                    <p id="show-text" class="card-text">Tôi chưa bao giờ nghĩ đi tour lại thoải mái và
+                                    <p id="show-text" class="card-text">Tôi chưa bao giờ nghĩ đi tour lại thoải
+                                        mái và
                                         chất
                                         lượng đến thế.
                                         Trong chuyến đi Bắc Âu do VGS Travel kết cùng EVGA (Hiệp hội golf người Việt Nam
@@ -782,7 +785,8 @@
                                             <i class="fa-solid fa-star"></i>
                                         </div>
                                     </div>
-                                    <p id="show-text" class="card-text">Lần đầu EVGA (Hiệp hội golf người Việt tại Châu
+                                    <p id="show-text" class="card-text">Lần đầu EVGA (Hiệp hội golf người Việt tại
+                                        Châu
                                         Âu)
                                         kết hợp cùng
                                         VGS Travel là công ty lữ hành chuyên nghiệp về golf để tổ chức đưa các golfers
@@ -820,7 +824,8 @@
                                             <i class="fa-solid fa-star"></i>
                                         </div>
                                     </div>
-                                    <p id="show-text" class="card-text">Là một người yêu golf và cũng đã từng du lịch
+                                    <p id="show-text" class="card-text">Là một người yêu golf và cũng đã từng du
+                                        lịch
                                         chơi
                                         golf ở nhiều sân
                                         trên thế giới nhưng chuyến du lịch golf Châu Âu cùng VGS Travel kết hợp cùng
@@ -850,7 +855,8 @@
                         <div class="tab" style="padding: 0 15px;">
 
                             <div class="row menu-experience">
-                                <p class="tablinks col-6 col-md-3 p1" onclick="openCity(event, 'travel')">Kinh nghiệm du
+                                <p class="tablinks col-6 col-md-3 p1" onclick="openCity(event, 'travel')">Kinh nghiệm
+                                    du
                                     lịch</p>
                                 <p class="tablinks col-6 col-md-3 p2" onclick="openCity(event, 'culinary')">Trải nghiệm
                                     ẩm
@@ -864,85 +870,34 @@
                         <div id="travel" class="tabcontent" style="padding: 0 15px;">
                             <div class="travel-experience">
                                 <div class="row mb-5">
-                                    <div class="col-12 col-md-4 p-0">
-                                        <img style="width: 100%; height: 100%; object-fit: cover;"
-                                            src="https://vgstravel.com/images/blog/830_1633688924_blog.png" alt="">
-                                    </div>
-                                    <div class="col-12 col-md-8">
-                                        <h4>Tổng hợp kinh nghiệm du lịch Ireland và những điều cần biết</h4>
-                                        <p>Không phải tự nhiên mà Ireland được mệnh danh một trong những đất nước đáng
-                                            sống
-                                            nhất thế giới, cũng như một địa điểm du lịch Châu Âu lý tưởng. Những ngọn
-                                            đồi
-                                            xanh mướt, đường bờ biển duyên dáng, những lâu đài cổ kính, và rượu whisky,
-                                            bia
-                                            Guinness nổi tiếng... đã thu hút hàng triệu du khách đặt chân tới Ireland
-                                            mỗi
-                                            năm. Những kinh nghiệm du lịch Ireland dưới đây do VGS Travel tổng hợp sẽ
-                                            giúp
-                                            bạn có một chuyến vi vu tuyệt vời đến “Hòn đảo ngọc lục bảo” đầy mê hoặc của
-                                            Châu Âu này!</p>
-                                    </div>
+                                    @if (count($isHeadKinhNghiemDuLichs) > 0)
+                                        <div class="col-12 col-md-4 p-0">
+                                            <img src="{{ asset('uploads/blog_image/' . $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->profile_image) }}"
+                                                alt="">
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <h4>{{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->title }}
+                                            </h4>
+                                            <p>{{ $isHeadKinhNghiemDuLichs[count($isHeadKinhNghiemDuLichs) - 1]->content }}
+                                            </p>
+                                        </div>
+                                    @endif
+
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row bg-den">
-                                            <div class="col-12 col-md-4 boi-den">
-                                                <img src="https://vgstravel.com/images/blog/40_1633682276_blog.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8  test">
-                                                <p>Kinh nghiệm du lịch Hungary siêu chi tiết...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row  bg-den">
-                                            <div class="col-12 col-md-4 boi-den">
-                                                <img src="https://vgstravel.com/images/blog/46_1633666265_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test">
-                                                <p>Tổng hợp kinh nghiệm du lịch Ý siêu chi tiết cho...</p>
+                                    @foreach ($kinhNghiemDuLichs as $kinhNghiemDuLich)
+                                        <div class="col-12 col-md-4 space">
+                                            <div class="row bg-den">
+                                                <div class="col-12 col-md-4 boi-den">
+                                                    <img src="{{ asset('uploads/blog_image/' . $kinhNghiemDuLich->profile_image) }}"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-12 col-md-8  test">
+                                                    <p>{{ $kinhNghiemDuLich->content }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row  bg-den">
-                                            <div class="col-12 col-md-4 boi-den">
-                                                <img src="https://vgstravel.com/images/blog/241_1634015019_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test">
-                                                <p>Những điều bạn cần biết khi đi du lịch Scotland -...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row  bg-den">
-                                            <div class="col-12 col-md-4 boi-den">
-                                                <img src="https://vgstravel.com/images/blog/357_1634029080_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test">
-                                                <p>Tất tần tật kinh nghiệm du lịch Hy Lạp - Cập nhật</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row  bg-den">
-                                            <div class="col-12 col-md-4 boi-den">
-                                                <img src="https://vgstravel.com/images/blog/831_1634032368_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test">
-                                                <p>Cẩm nang khám phá xứ sở hoa hồng - Du lịch...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4"></div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -950,58 +905,69 @@
                         <div id="culinary" class="tabcontent" style="padding: 0 15px;">
                             <div class="culinary-experience">
                                 <div class="row mb-5">
-                                    <div class="col-12 col-md-4 p-0">
-                                        <img style="width: 100%; height: 100%; object-fit: cover;"
-                                            src="https://vgstravel.com/images/blog/59_1634523305_blog.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-md-8 p-0">
-                                        <h4>KHÁM PHÁ ẨM THỰC NEW ZEALAND: TOP 10 MÓN ĂN NHẤT ĐỊNH PHẢI THỬ</h4>
-                                        <p>Là quốc gia được bao quanh bởi đại dương mênh mông, bên cạnh những cảnh quan
-                                            hấp
-                                            dẫn, đảo quốc New Zealand còn hấp dẫn du khách với nền ẩm thực đa dạng và
-                                            độc
-                                            đáo. Ẩm thực New Zealand là sự pha trộn giữa nhiều nền văn hóa, có những nét
-                                            tương đồng với các món ăn Anh, ảnh hưởng một chút ẩm thực Địa Trung Hải và
-                                            có
-                                            nét đặc trưng của người Maori bản địa. Bài viết dưới đây sẽ giúp bạn khám
-                                            phá sự
-                                            phong phú, sáng tạo của ẩm thực New Zealand và top 10 món ăn ở New Zealand
-                                            nhất
-                                            định phải thử.</p>
-                                    </div>
+                                    @if (count($isHeadTraiNghiemAmThucs) > 0)
+                                        <div class="col-12 col-md-4 p-0">
+                                            <img src="{{ asset('uploads/blog_image/' . $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->profile_image) }}"
+                                                alt="">
+                                        </div>
+                                        <div class="col-12 col-md-8 p-0">
+                                            <h4>{{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->title }}
+                                            </h4>
+                                            <p>{{ $isHeadTraiNghiemAmThucs[count($isHeadTraiNghiemAmThucs) - 1]->content }}
+                                            </p>
+                                        </div>
+                                    @endif
+
                                 </div>
+                                <div class="row">
+                                    @foreach ($traiNghiemAmThucs as $traiNghiemAmThuc)
+                                        <div class="col-12 col-md-4 space">
+                                            <div class="row bg-den">
+                                                <div class="col-12 col-md-4 boi-den">
+                                                    <img src="{{ asset('uploads/blog_image/' . $traiNghiemAmThuc->profile_image) }}"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-12 col-md-8  test">
+                                                    <p>{{ $traiNghiemAmThuc->content }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
                             </div>
+
                         </div>
 
                         <div id="news" class="tabcontent" style="padding: 0 15px;">
                             <div class="news-events">
                                 <div class="row mb-5">
-                                    <div class="col-12 col-md-4 p-0">
-                                        <img style="width: 100%; height: 100%; object-fit: cover;"
-                                            src="https://vgstravel.com/images/blog/11_1642499829_blog.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-md-8 p-0">
-                                        <h4>Khám phá các đường bay thương mại quốc tế mới nhất - Bay cùng VNA</h4>
-                                        <p>Vietnam Airlines đang dần khôi phục các đường bay quốc tế thường lệ hai chiều
-                                            phục vụ nhu cầu vi vu quốc tế, du lịch, thăm thân,... của hành khách. Theo
-                                            dõi
-                                            thông tin lịch trình các chuyến bay được cập nhật mới nhất trong bài viết
-                                            dưới
-                                            đây.</p>
-                                    </div>
+                                    @if (count($isHeadVeMayBays) > 0)
+                                        <div class="col-12 col-md-4 p-0">
+                                            <img src="{{ asset('uploads/blog_image/' . $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->profile_image) }}"
+                                                alt="">
+                                        </div>
+                                        <div class="col-12 col-md-8 p-0">
+                                            <h4>{{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->title }}</h4>
+                                            <p>{{ $isHeadVeMayBays[count($isHeadVeMayBays) - 1]->content }}</p>
+                                        </div>
+                                    @endif
+
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row bg-den">
-                                            <div class="col-12 col-md-4 boi-den p-0">
-                                                <img src="https://vgstravel.com/images/blog/358_1643170434_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test p-0">
-                                                <p>Vietnam Airlines nối lại đường bay châu Âu từ...</p>
+                                    @foreach ($veMayBays as $veMayBay)
+                                        <div class="col-12 col-md-4 space">
+                                            <div class="row bg-den">
+                                                <div class="col-12 col-md-4 boi-den">
+                                                    <img src="{{ asset('uploads/blog_image/' . $veMayBay->profile_image) }}"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-12 col-md-8  test">
+                                                    <p>{{ $veMayBay->content }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1009,32 +975,34 @@
                         <div id="news2" class="tabcontent" style="padding: 0 15px;">
                             <div class="news-events">
                                 <div class="row mb-5">
-                                    <div class="col-12 col-md-4 p-0">
-                                        <img style="width: 100%; height: 100%; object-fit: cover;"
-                                            src="https://vgstravel.com/images/blog/11_1642499829_blog.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-md-8 p-0">
-                                        <h4>Khám phá các đường bay thương mại quốc tế mới nhất - Bay cùng VNA</h4>
-                                        <p>Vietnam Airlines đang dần khôi phục các đường bay quốc tế thường lệ hai chiều
-                                            phục vụ nhu cầu vi vu quốc tế, du lịch, thăm thân,... của hành khách. Theo
-                                            dõi
-                                            thông tin lịch trình các chuyến bay được cập nhật mới nhất trong bài viết
-                                            dưới
-                                            đây.</p>
-                                    </div>
+                                    @if (count($isHeadTinTucVaSuKiens) > 0)
+                                        <div class="col-12 col-md-4 p-0">
+                                            <img src="{{ asset('uploads/blog_image/' . $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->profile_image) }}"
+                                                alt="">
+                                        </div>
+                                        <div class="col-12 col-md-8 p-0">
+                                            <h4>{{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->title }}
+                                            </h4>
+                                            <p>{{ $isHeadTinTucVaSuKiens[count($isHeadTinTucVaSuKiens) - 1]->content }}
+                                            </p>
+                                        </div>
+                                    @endif
+
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-md-4 space">
-                                        <div class="row bg-den">
-                                            <div class="col-12 col-md-4 boi-den p-0">
-                                                <img src="https://vgstravel.com/images/blog/358_1643170434_blog.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-12 col-md-8 test p-0">
-                                                <p>Vietnam Airlines nối lại đường bay châu Âu từ...</p>
+                                    @foreach ($tinTucVaSuKiens as $tinTucVaSuKien)
+                                        <div class="col-12 col-md-4 space">
+                                            <div class="row bg-den">
+                                                <div class="col-12 col-md-4 boi-den">
+                                                    <img src="{{ asset('uploads/blog_image/' . $tinTucVaSuKien->profile_image) }}"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-12 col-md-8  test">
+                                                    <p>{{ $tinTucVaSuKien->content }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1048,27 +1016,27 @@
                         </div>
                         <div style="padding: 0 15px;">
                             <div class="row">
-                                <div class="feather">
-                                    <img style="width: 100%; min-height: 200px; object-fit: cover;"
-                                        src="https://vgstravel.com/images/blog/46_1633666265_blog.jpg" alt="">
-                                    <h5
-                                        style="color: white; overflow: hidden; position: absolute; text-align: center; top: 40px; padding: 0 30px;">
-                                        Tổng hợp kinh nghiệm du lịch Ý siêu chi tiết cho golfer</h5>
-                                </div>
-                            </div>
+                                @if (count($isHeadBaiVietNoiBats) > 0)
+                                    <div class="feather">
+                                        <img src="{{ asset('uploads/blog_image/' . $isHeadBaiVietNoiBats[count($isHeadBaiVietNoiBats) - 1]->profile_image) }}"
+                                            alt="">
+                                        <h5
+                                            style="color: white; overflow: hidden; position: absolute; text-align: center; top: 40px; padding: 0 30px;">
+                                            {{ $isHeadBaiVietNoiBats[count($isHeadBaiVietNoiBats) - 1]->title }}</h5>
+                                    </div>
+                                @endif
 
-                            <div class="row mb-3  bg-feather">
-                                <div class="col-12 col-md-4 boi-den">
-                                    <img src="https://vgstravel.com/images/blog/40_1633682276_blog.png" alt="">
-                                </div>
-                                <div class="col-12 col-md-8 test">Kinh nghiệm du lịch Hungary siêu chi tiết</div>
                             </div>
-                            <div class="row  bg-feather">
-                                <div class="col-12 col-md-4 boi-den">
-                                    <img src="https://vgstravel.com/images/blog/830_1633688924_blog.png" alt="">
+                            @foreach ($baiVietNoiBats as $baiVietNoiBat)
+                                <div class="row mb-3  bg-feather">
+                                    <div class="col-12 col-md-4 boi-den">
+                                        <img src="{{ asset('uploads/blog_image/' . $baiVietNoiBat->profile_image) }}"
+                                            alt="">
+                                    </div>
+                                    <div class="col-12 col-md-8 test">{{ $baiVietNoiBat->content }}</div>
                                 </div>
-                                <div class="col-12 col-md-8 test">Tổng hợp kinh nghiệm du lịch Ireland và những</div>
-                            </div>
+                            @endforeach
+
                         </div>
 
                     </div>
