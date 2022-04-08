@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {{-- <div class="phantrang">
     <ul>
         <li class="active-phantrang">
@@ -64,6 +65,8 @@
             </ul>
         </div>
 =======
+=======
+>>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
 @if ($paginator->hasPages())
     <nav>
         <ul class="pagination">
@@ -108,6 +111,9 @@
                 </li>
             @endif
         </ul>
+<<<<<<< HEAD
+>>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
+=======
 >>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
     </nav>
 @endif
