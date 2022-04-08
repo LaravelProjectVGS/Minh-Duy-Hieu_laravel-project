@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&lsaquo;</span>
                 </li>
             @else
-                <li  class="asd">
+                <li>
                     <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">&lsaquo;</a>
                 </li>
             @endif
