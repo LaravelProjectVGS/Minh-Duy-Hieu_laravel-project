@@ -935,12 +935,13 @@ footer {
 .detail-des {
     /* margin-top: 24px; */
     width: 70%;
+    height: auto;
     display: flex;
     padding: 24px 10px 0 10px;
 }
 
 .detail-title {
-    width: 40%;
+    width: 30%;
     border-right: 1px solid #c3a30b;
     margin: 0px 16px 0px 0px;
 }
@@ -959,7 +960,7 @@ footer {
     white-space: nowrap;
 }
 
-.detail-text-img {margin-top: 15px;}
+.detail-text-img {margin-top: 15px; width: 70%;}
 
 .detail-text-img h4{
     text-align: justify;
@@ -1361,7 +1362,8 @@ ul {padding-left: 0;}
     .post-img {width: 100%; padding: 0;}
     .chuyendulich {margin-top: 10px;}
     .detail {display: block;}
-    .detail-des {width: 100%;}
+    .detail-des {width: 100% !important;}
+    .detail-text-img {width: 100%;}
     .detail-title {display: none;}
     .detail-mucluc {width: 100% !important; padding-bottom: 50px;}
     .price {display: block;}

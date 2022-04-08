@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="container" style="width: 100%; height:98vh; overflow: scroll;">
+    <table style="border-collapse: collapse;" id="table">
+        
+
+    </table>
+    </div>
+    <input type="range" start="0" step="1" id="range" style="position: fixed; top: 10px; left: 50%;">
+    <script>
+       
+        var table = document.getElementById("table");
+        var container = document.getElementById("container");
+        var range = document.getElementById("range");
+        range.addEventListener("input", function() {
+            var zoom = 1 + this.value;
+            table.style.transform = 'scale('+zoom/100+')';
+        })
+        
+        for(var i = 0; i < 100; i++) {
+            var trC = document.createElement("tr");
+            for(var j = 0; j < 100; j++) {
+                var tdC = document.createElement("td");
+                var div = document.createElement("div");
+                div.style.width = '10px';
+                div.style.height = '10px';
+                tdC.style.width = '10px';
+                tdC.style.height = '10px';
+                tdC.style.border = '1px solid #ddd';
+                if(i < 20 && i > 15 && j > 20 && j <30) {
+                    tdC.style.background = 'black';
+                }
+                tdC.appendChild(div);
+                trC.appendChild(tdC);
+            }
+            table.appendChild(trC);
+        }
+    </script>
+</body>
+</html>
