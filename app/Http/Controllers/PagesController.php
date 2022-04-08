@@ -169,4 +169,8 @@ class PagesController extends Controller
        
         return view(('page.createpage'), ['tours'=>$listTour, 'keySearch'=>$request->search]);
     }
+
+    public function test() {
+        
+    }
 }
