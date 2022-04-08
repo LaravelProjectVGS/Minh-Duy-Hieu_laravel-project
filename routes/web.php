@@ -3,20 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ControllerDemo;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VGSController;
-=======
+
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogVgsController;
 use App\Http\Controllers\TodoController;
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
-=======
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\BlogVgsController;
-use App\Http\Controllers\TodoController;
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,22 +22,20 @@ use App\Http\Controllers\TodoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/fileview/addfile', [FileController::class, 'create']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Route::post('/fileview', [FileController::class, 'store']);
 
 Route::get('fileview/{id}/edit', [FileController::class, 'edit']);
 
 Route::resource('/fileview', FileController::class);
-=======
+
 // Route::get('/blog', [BlogController::class, 'index']);
 
-=======
+
 // Route::get('/blog', [BlogController::class, 'index']);
 
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
 Route::get('/', [PagesController::class, 'createpage']);
 Route::post('/docreatepage', [PagesController::class, 'docreatepage']);
 
@@ -55,10 +47,10 @@ Route::get('/vgsTour/{id}', [PagesController::class, 'vgsTour']);
 
 Route::get('/vgsTravel', [PagesController::class, 'vgsTravel']);
 
-Route::get('/tour/add', function(){
-   return view('page.addnewPage');
+Route::get('/tour/add', function () {
+    return view('page.addnewPage');
 });
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
+
 
 Route::get('/tour/edit/{id}', [PagesController::class, 'showEditPage']);
 Route::post('/tour/edit/{id}', [PagesController::class, 'doEditPage']);
@@ -68,11 +60,6 @@ Route::get('/tour/delete/{id}', [PagesController::class, 'deletePage']);
 Route::get('/tour/upload', [PagesController::class, 'uploadImg']);
 Route::post('/tour/upload', [PagesController::class, 'imageUploadPost']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/', function(){
-   return view('components.content');
-});
 
 
 Route::resource('/vgsuser', VGSController::class);
@@ -87,28 +74,27 @@ Route::get('searchuser', [VGSController::class, 'search']);
 
 Route::get('vgsuser/{id}/edit', [VGSController::class, 'edit']);
 
-Route::delete('/delete_user/{id}',[VGSController::class, 'destroy']);
-=======
+Route::delete('/delete_user/{id}', [VGSController::class, 'destroy']);
+
 Route::get('/tour/edit/{id}/editimg', [PagesController::class, 'editImg']);
 Route::post('/tour/edit/{id}/editimg', [PagesController::class, 'imageEditPost']);
 
 Route::get('/tour/search', [PagesController::class, 'searchTour']);
 
 Route::get('/test', function () {
-   return view('page.test');
+    return view('page.test');
 });
 
-=======
 Route::get('/tour/edit/{id}/editimg', [PagesController::class, 'editImg']);
 Route::post('/tour/edit/{id}/editimg', [PagesController::class, 'imageEditPost']);
 
 Route::get('/tour/search', [PagesController::class, 'searchTour']);
 
 Route::get('/test', function () {
-   return view('page.test');
+    return view('page.test');
 });
 
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
+
 ## /routes/web.php
 Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
     ->name('ckfinder_connector');
@@ -150,13 +136,5 @@ Route::delete('/blogVgs/{id}', [BlogVgsController::class, 'destroy']);
 Route::get('/blogVgs/search', [BlogVgsController::class, 'search']);
 
 
-Auth::routes();
+// Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< HEAD
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
-=======
->>>>>>> c44b20eb9f39654a5840cb848c0b6714451eb7df
