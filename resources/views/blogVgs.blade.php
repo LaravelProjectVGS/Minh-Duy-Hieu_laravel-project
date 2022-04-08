@@ -51,6 +51,29 @@
         item.innerHTML = test;
     })
 
+    // $(document).ready(function() {
+    //     console.log("tesst");
+    //     $(document).on('keyup', '#keyword', function() {
+    //         var keyword = $(this).val();
+
+    //         $.ajax({
+    //             type: "get",
+    //             url: "/blogVgs/search",
+    //             data: {
+    //                 keyword: keyword
+    //             },
+    //             dataType: "json",
+    //             success: function(response) {
+    //                 $('#listItem').html(response);
+
+    //             }
+    //         })
+
+
+    //         console.log("ajax");
+    //     })
+    // })
+
     console.log("hello");
     document.getElementById('travel').style.display = "block";
 

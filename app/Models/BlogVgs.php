@@ -13,7 +13,8 @@ class BlogVgs extends Model
         'options',
         'profile_image',
         'head',
-        'description'
+        'description',
+        'content'
     ];
 
     public $timestamps = false;

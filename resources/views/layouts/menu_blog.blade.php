@@ -1,5 +1,21 @@
 <div class="body-right">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <form action="" class="search-blog" style="display: flex">
+        <input type="text" name="keyword" id="keyword" placeholder="Nhập từ bạn cần tìm?" style="    width: 100%;
+        padding: 20px 10px;
+        padding-left: 20px;
+        border: none;
+        margin-bottom: 30px;
+        background: #f6f6f6;
+        padding-right: 58px;     border-start-start-radius: 20px; outline: none">
+        <button type="submit" style="height: 60px;
+        font-size: 21px;
+        color: white;
+        border: none;
+        background: #c3a30b;
+        padding: 0 30px;
+        border-end-end-radius: 20px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
     <div class="scroll">
         <table class="table">
             <thead>
@@ -32,7 +48,7 @@
                 </tr>
             </thead>
 
-            <tbody class="page-1 macdinh">
+            <tbody class="page-1 macdinh" id="listItem">
                 @foreach ($items as $item)
                     <tr>
                         <td scope="row" data-label="Title" class="td-top">
@@ -109,16 +125,5 @@
         border-radius: 6px;
         color: white;">Update</a>
     </div>
-
-    <div class="numbers">
-        <div class="number active1">
-            <p style="margin: 0">1</p>
-        </div>
-        <div class="number none m-0" style="margin-right: 9px!important">
-            <p style="margin: 0">2</p>
-        </div>
-        <div class="number none m-0">
-            <p style="margin: 0">3</p>
-        </div>
-    </div>
+    {{ $items->appends(request()->all())->links('blogVgs_components.my-paginate') }}
 </div>

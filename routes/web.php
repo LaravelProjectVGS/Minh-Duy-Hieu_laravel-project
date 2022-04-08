@@ -48,7 +48,7 @@ Route::put('/blogVgs/{id}', [BlogVgsController::class, 'update']);
 
 Route::delete('/blogVgs/{id}', [BlogVgsController::class, 'destroy']);
 
-
+Route::get('/blogVgs/search', [BlogVgsController::class, 'search']);
 
 
 Auth::routes();

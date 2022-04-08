@@ -836,3 +836,25 @@ i {
     outline: none;
     border: none;
 }
+
+.invalid input {
+    border: 2px solid red;
+}
+
+.invalid span {
+    color: red;
+}
+
+.invalid textarea {
+    border: 2px solid red;
+}
+
+.parsley-errors-list li {
+    list-style: none;
+    color: red;
+}
+
+
+.client {
+    color: #e74c3c;
+}

@@ -16,6 +16,7 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/chosen.min.css') }}">
     <script src="{{ asset('js/chosen.jquery.min.js') }}"></script>
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
@@ -41,6 +42,8 @@
 </body>
 
 <script>
+    //
+
     // document.getElementById('London').style.display = "block";
     function openCity(evt, cityName) {
         // Declare all variables
@@ -86,6 +89,7 @@
     }
 
     var editor = CKEDITOR.replace('content');
+
     CKFinder.setupCKEditor(editor);
 
     CKEDITOR.replace('content', {
@@ -125,44 +129,109 @@
         deleteItem(e)
     })
 
-    var tablePlus = document.querySelector('.table-plus')
-
-    var insertTable = document.querySelector('.insert-table')
-
-    tablePlus.addEventListener('click', function() {
-        insertTable.style.visibility = "visible"
-    })
-
-    var hide_row = document.querySelector('.hide-row')
-    hide_row.addEventListener('click', function() {
-        insertTable.style.visibility = "collapse"
-    })
 
 
-    var userPlus = document.querySelector('.user-plus')
-    var insertUser = document.querySelector('.insert-user')
+    // // dkaadas
+    // console.log("validate");
 
-    userPlus.addEventListener('click', function() {
-        insertUser.style.visibility = "visible"
-    })
+    // console.log(editor);
 
-    var hide_user = document.querySelector('.hide-user')
-    hide_user.addEventListener('click', function() {
-        insertUser.style.visibility = "collapse"
-    })
+    // editor.on('blur', function() {
+    //     var check = function(value) {
+    //         console.log('1');
+    //         return value.trim() ? undefined : 'Vui lòng nhập trường này'
+    //     };
+    //     var errorMessageCk = check(editor.getData().replace('&nbsp;', ''));
+    //     var errorElementCk = document.querySelector('.form-message_ckediter');
+    //     if (errorMessageCk) {
+    //         errorElementCk.innerText = errorMessageCk;
+    //         document.querySelector('.form-message_ckediter').style.color = 'red';
+    //         document.querySelector('#cke_content').style.border = '2px solid red';
+    //         document.querySelector('.text-content').style.display = 'none';
+    //     } else {
+    //         errorElementCk.innerText = '';
+    //         //inputElement.parentElement.classList.remove('invalid');
+    //         document.querySelector('.form-message_ckediter').style.color = 'black';
+    //         document.querySelector('#cke_content').style.border = 'none';
+    //     }
+    // });
 
 
-    var pagePlus = document.querySelector('.page-plus')
-    var insertPage = document.querySelector('.insert-page')
+    // editor.on('change', function() {
+    //     var errorElementCk = document.querySelector('.form-message_ckediter');
+    //     errorElementCk.innerText = '';
+    //     document.querySelector('.form-message_ckediter').style.color = 'black';
+    //     document.querySelector('.ckeditor').style.border = 'none';
+    // });
 
-    pagePlus.addEventListener('click', function() {
-        insertPage.style.visibility = "visible"
-    })
 
-    var hide_page = document.querySelector('.hide-page')
-    hide_page.addEventListener('click', function() {
-        insertPage.style.visibility = "collapse"
-    })
+
+    // function Validator(options) {
+
+    //     function validate(inputElement, rule) {
+    //         var errorMessage = rule.test(inputElement.value);
+    //         var errorElement = inputElement.parentElement.querySelector('.form-message');
+    //         if (errorMessage) {
+    //             errorElement.innerText = errorMessage;
+    //             inputElement.parentElement.classList.add('invalid');
+    //         } else {
+    //             errorElement.innerText = '';
+    //             inputElement.parentElement.classList.remove('invalid');
+    //         }
+    //     }
+
+    //     var formElement = document.querySelector(options.form);
+    //     console.log(options.rules);
+    //     if (formElement) {
+    //         options.rules.forEach(function(rule) {
+
+    //             var inputElement = formElement.querySelector(rule.selector)
+    //             if (inputElement) {
+    //                 console.log(inputElement);
+    //                 inputElement.onblur = function() {
+    //                     validate(inputElement, rule);
+    //                 }
+
+    //                 inputElement.oninput = function() {
+    //                     var errorElement = inputElement.parentElement.querySelector(
+    //                         '.form-message');
+
+    //                     errorElement.innerText = '';
+    //                     inputElement.parentElement.classList.remove('invalid');
+    //                 }
+
+    //                 inputElement.addEventListener('click', function() {
+    //                     inputElement.parentElement.querySelector('.text-danger').style
+    //                         .display = 'none';
+    //                     console.log(document.querySelectorAll('.text-danger'));
+    //                 })
+    //             }
+    //         })
+    //     }
+    // }
+
+    // Validator.isRequired = function(selector) {
+    //     return {
+    //         selector: selector,
+    //         test: function(value) {
+    //             return value.trim() ? undefined : 'Vui lòng nhập trường này'
+    //         }
+    //     }
+    // }
+
+    // Validator({
+    //     form: '#form',
+    //     rules: [
+    //         Validator.isRequired('#title'),
+    //         Validator.isRequired('#description'),
+    //         Validator.isRequired('#content')
+    //     ]
+    // });
+
+    // var test = document.querySelector('#content');
+    // test.onblur = function() {
+    //     console.log("okkk");
+    // }
 </script>
 
 

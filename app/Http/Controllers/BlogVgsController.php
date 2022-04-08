@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Session\Session;
+use App\Http\Requests\blogVgs\BlogVgsRequest2;
 
 class BlogVgsController extends Controller
 {
@@ -22,7 +23,13 @@ class BlogVgsController extends Controller
      */
     public function index()
     {
-        $listBlog = BlogVgs::get();
+        $listBlog = BlogVgs::paginate(3);
+        if ($keyword = request()->keyword) {
+            $listBlog = BlogVgs::orderBy('id', 'DESC')->where('title', 'like', '%' . $keyword . '%')->orWhere('options', 'like', '%' . $keyword . '%')->orWhere('description', 'like', '%' . $keyword . '%')->paginate(3);
+            // die(var_dump($listBlog));
+        }
+
+
         return view(('home'), ['items' => $listBlog]);
     }
 
@@ -45,9 +52,25 @@ class BlogVgsController extends Controller
     public function store(Request $request)
     {
         $item = new BlogVgs;
+        $request->validate([
+            'title' => 'required',
+            'profile_image' => 'required',
+            'description' => 'required|min:5',
+            'content' => 'required|min:5'
+        ], [
+            'title.required' => 'Name is required',
+            'description.required' => 'Description is required',
+            'profile_image.required' => 'Image not found',
+            'content.required' => 'Content is required'
+        ]);
         $item->title = $request->title;
         $item->options = $request->options;
         if ($request->hasFile('profile_image')) {
+            $request->validate([
+                'profile_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            ], [
+                'profile_image.required' => 'Image not valid'
+            ]);
             $file = $request->profile_image;
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
@@ -150,7 +173,43 @@ class BlogVgsController extends Controller
         return view('vgsTravel_Duy', compact('kinhNghiemDuLichs', 'traiNghiemAmThucs', 'veMayBays', 'tinTucVaSuKiens', 'baiVietNoiBats', 'isHeadKinhNghiemDuLichs', 'isHeadTraiNghiemAmThucs', 'isHeadVeMayBays', 'isHeadTinTucVaSuKiens', 'isHeadBaiVietNoiBats'));
     }
 
-    public function itemBlog($id)
+    public function search(Request $request)
     {
+        // {
+        //     $output = '';
+        //     $items = BlogVgs::where('title', 'LIKE', '%' . $request->keyword . '%')->get();
+        //     die(var_dump($request));
+        //     foreach ($items as $item) {
+        //         $output .= '
+        //         <tr>
+        //         <td scope="row" data-label="Title" class="td-top">
+        //             <div class="title">
+        //                 <h2>' . $item->title . '</h2>
+        //                 <p>Posted days ago</p>
+        //             </div>
+        //         </td>
+        //         <td data-label="Image">
+        //             <img src="' . asset('uploads/blog_image/' . $item->profile_image) . '" width="70px"
+        //                 height="70px" alt="" style="object-fit: cover">
+        //         </td>
+        //         <td data-label="isHead">
+        //             <p>' . $item->head . '</p>
+        //         </td>
+        //         <td data-label="Description">
+        //             <p style="-webkit-line-clamp: 5;
+        //             -webkit-box-orient: vertical;
+        //             overflow: hidden;
+        //             display: -webkit-box;">' . $item->description . '</p>
+        //         </td>
+        //         <td data-label="Content">
+        //             <p id="toHtml" style=" -webkit-line-clamp: 5;
+        //             -webkit-box-orient: vertical;
+        //             overflow: hidden;
+        //             display: -webkit-box;">' . $item->content . '</p>
+        //         </td>
+        //         </tr>
+        //         ';
+        //     }
+        //     return response()->json($output);
     }
 }
