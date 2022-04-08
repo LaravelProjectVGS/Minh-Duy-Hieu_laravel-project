@@ -138,3 +138,7 @@ Route::get('/blogVgs/search', [BlogVgsController::class, 'search']);
 
 // Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
