@@ -17,10 +17,10 @@
             <a href="#" class="nav-link dot"><img src="{{asset('images/pen-tool.svg')}}" alt="">Blog articles</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link dot"><img src="{{asset('images/image.svg')}}" alt="">Files</a>
+            <a href="{{url('fileview')}}" class="nav-link dot"><img src="{{asset('images/image.svg')}}" alt="">Files</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link dot"><img src="{{asset('images/users.svg')}}" alt="">Users</a>
+            <a href="{{ url('vgsuser')}}" class="nav-link dot"><img src="{{asset('images/users.svg')}}" alt="">Users</a>
         </li>
         <li class="nav-item">
             <a href="#" class="nav-link dot"><img src="{{asset('images/zap.svg')}}" alt="">Subscriptions</a>

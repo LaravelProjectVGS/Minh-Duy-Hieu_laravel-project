@@ -72,3 +72,92 @@ $('.btn-clear-img').on('click', function () {
 
     $('#img-preview').empty()
 })
+
+
+
+function abc(){
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("fileUpload");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+}
+
+
+// $(document).ready(function(){
+//     $('#pop-up-form-add').submit(function(e){
+//         e.preventDefault();
+
+//         var url = $(this).attr('data-url');
+
+//         $.ajax({
+//             type: 'post',
+//             url: url,
+//             data: {
+//                 name: $('#name').val(),
+//                 file: $('#file').val(),
+//             },
+//             success: function(response){
+//                 toastr.success('Add new student success!')
+
+//                 $('.modal').modal('hide');
+//                 setTimeout(function(){
+//                     window.location.href = "{{route('fileview.index')}}"
+//                 })
+//             }
+//         })
+//     })
+// })
+
+// $().ready(function() {
+// 	$("#upload-user").validate({
+// 		onfocusout: false,
+// 		onkeyup: false,
+// 		onclick: false,
+// 		rules: {
+// 			"user_name": {
+// 				required: true,
+// 			},
+// 			"img_name": {
+// 				required: true,
+// 			},
+//             "text": {
+// 				required: true,
+// 			},
+// 		},
+// 		messages: {
+// 			"user_name": {
+// 				required: "Bạn chưa nhập tên",
+// 			},
+// 			"img_name": {
+// 				required: "Bạn chưa thêm file",
+
+// 			},
+// 			"text": {
+// 				equalTo: "Bắt buộc nhập trường này",
+
+// 			}
+// 		}
+// 	});
+// });

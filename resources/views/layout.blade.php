@@ -8,9 +8,12 @@
     <title>Create_view</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fileview.css') }}">
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+        integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -50,10 +53,12 @@
                             articles</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('fileview.fileview')}}" class="nav-link dot"><img src="{{ asset('images/image.svg') }}" alt="">Files</a>
+                        <a href="{{ url('fileview') }}" class="nav-link dot"><img
+                                src="{{ asset('images/image.svg') }}" alt="">Files</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link dot"><img src="{{ asset('images/users.svg') }}" alt="">Users</a>
+                        <a href="{{ url('vgsuser') }}" class="nav-link dot"><img
+                                src="{{ asset('images/users.svg') }}" alt="">Users</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link dot"><img src="{{ asset('images/zap.svg') }}"
@@ -72,7 +77,8 @@
                                 alt="">Themes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link dot"><img src="{{ asset('images/box.svg') }}" alt="">Plugins</a>
+                        <a href="#" class="nav-link dot"><img src="{{ asset('images/box.svg') }}"
+                                alt="">Plugins</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link dot"><img src="{{ asset('images/coffee.svg') }}" alt="">Upgrade
@@ -83,10 +89,17 @@
         </div>
     </div>
     <div class="body">
+
         @include('components.slide')
         @yield('content')
         @yield('fileview')
+        @yield('addfile')
+        @yield('updatefile')
 
+        @yield('uservgs')
+        @yield('adduser')
+        @yield('edituser')
+        @yield('searchuser')
     </div>
     </div>
     <script src="./js/index.js"></script>
