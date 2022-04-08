@@ -1,6 +1,6 @@
 @section('base')
     <div class="header">
-        <div class="containerr">
+        <a href="{{url('/')}}" class="containerr">
             <div class="h-logo">
                 <div class="logo">
                     <img src="./images/Group.svg" alt="" class="group">
@@ -11,7 +11,7 @@
                 <div class="pro-plan"><span class="pro-plan-text">Pro plan</span></div>
                 <div class="mask"></div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="menu-reponsive" id="menu">
         <label for="html" class="mn"><i class="fa-solid fa-bars"></i></label>

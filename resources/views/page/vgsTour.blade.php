@@ -276,20 +276,20 @@
                 <nav>
                     <ul>
                         <li><a href="#">TRANG CHỦ</a></li>
-                        <li><a href="#">TOUR GOLF CHÂU ÂU</a></li>
-                        <li><a href="#">Tour golf UK - Scotland: từ "Xứ sở sương mù" tới "Quê hương của golf"</a></li>
+                        <li><a href="#">{{$tour->tour}}</a></li>
+                        <li><a href="#">{{$tour->title}}</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="post">
-                <h3 class="post-title">Tour golf UK - Scotland: từ "Xứ sở sương mù" tới "Quê hương của golf"</h3>
+            <div id="post" class="post">
+                <h3 class="post-title">{{$tour->title}}</h3>
                 <div class="post-des">
                     <div class="post-txt">
-                        <p>Là một trong những địa điểm du lịch được yêu thích nhất châu Âu, nước Anh níu giữ du khách bởi vẻ đẹp lãng mạn và sự pha trộn hài hòa giữa nét cổ kính và vẻ hiện đại rất riêng. Dừng chân tại Anh, du khách có cơ hội được chiêm ngưỡng những công trình kiến trúc lịch sử độc đáo, ghé thăm những sân vận động bóng đá đẳng cấp thế giới, trải nghiệm mua sắm tại những khu phố và trung tâm mua sắm sầm uất với đa dạng các mặt hàng, và đặc biệt đây sẽ là điểm dừng chân lý tưởng cho các golfer thỏa mãn đam mê của mình. Các sân gôn ở nước Anh nổi bật bởi chất lượng đẳng cấp thế giới, thiết kế độc đáo với địa hình đa dạng. Hành trình du lịch golf Anh - Scotland còn đưa du khách đến với "hòn đảo sương mù" Scotland hay được biết đến là quê hương của golf. Sở hữu những sân golf đẳng cấp nổi tiếng lâu đời nhất thể giới nơi đây hứa hẹn sẽ đem lại những trải nghiệm đặc sắc, lý thú cho bất kỳ người chơi nào. </p>
+                        <p>{{$tour->description}}</p>
                     </div>
                     <div class="post-img">
-                        <img src="https://www.vgstravel.com/img/tour/23-10-2021/origin/origin-378685-1634984900-27-Hand-Luggage-Only-12.jpg" alt="">
+                        <img src="{{asset('images/'.$tour->img)}}" alt="">
                     </div>
                 </div>
             </div>
@@ -305,8 +305,10 @@
                     <div class="detail-title">
                         <span>Ngày chi tiết khởi hành</span>
                     </div>
-                    <div class="detail-text-img">
-                        <h4><span>Ngày 1: Khởi hành bay từ sân bay Nội Bài/ Tân Sơn Nhất - Edinburgh</span></h4>
+                    <div id="toHtml" class="detail-text-img ">
+                        {{$tour->todolist}}
+                        
+                        <!-- <h4><span>Ngày 1: Khởi hành bay từ sân bay Nội Bài/ Tân Sơn Nhất - Edinburgh</span></h4>
                         <p><span>Đoàn làm thủ tục bay chuyến Hà Nội/ Thành phố Hồ Chí Minh - Edinburgh.</span></p>
 
                         <h4><span>Ngày 2: HN/SG - Edinburgh</span></h4>
@@ -392,7 +394,7 @@
 
                         <h4><span>Ngày 13: London - Việt Nam</span></h4>
                         <p><span>Trả phòng khách sạn. Đoàn di chuyển đến Sân bay London Heathrow làm thủ tục để đáp chuyến bay về Việt Nam. </span></p>
-                        <p><span>Về đến Việt Nam. Kết thúc hành trình.</span></p>
+                        <p><span>Về đến Việt Nam. Kết thúc hành trình.</span></p> -->
                     
                     </div>
                 </div>
@@ -401,7 +403,13 @@
                         <span>Điểm tham quan chính</span>
                     </div>
                     <ul class="content-mucluc">
-                        <li>London</li>
+                        <?php
+                            $a = explode(",",$tour->place);
+                        ?>
+                        @foreach($a as $li)
+                        <li>{{$li}}</li>
+                        @endforeach
+                        <!-- <li>London</li>
                         <li>Sân Royal Birkdale Golf Club</li>
                         <li>Sân golf The Belfry</li>
                         <li>Cầu tháp London</li>
@@ -413,7 +421,7 @@
                         <li>Sân Kingsbarns Golf Club</li>
                         <li>Sân St. Andrews Old Course</li>
                         <li>Sân Fairmont St Andrews</li>
-                        <li>Sân PGA Centenary</li>
+                        <li>Sân PGA Centenary</li> -->
                     </ul>
                 </div>
             </div>
@@ -425,23 +433,29 @@
                     <p><span>Nếu quý khách không khởi hành từ thành phố Hồ Chí Minh/ Hà Nội vui lòng liên hệ với chúng tôi để sắp xếp chuyến bay (có phụ thu nếu phát sinh chi phí). </span></p>
                 </div>
                 <div class="ticket">
-                    <h3 class="title-ticket">Tour golf UK - Scotland: từ "Xứ sở sương mù" tới "Quê hương của golf"</h3>
+                    <h3 class="title-ticket">{{$tour->title}}</h3>
                     <ul class="d-flex row">
                         <li class="col-md-6">
                         <span class="time">Thời gian:</span>
-                        <span class="time-detail"> 13Ngày12 Đêm</span>
+                        <span class="time-detail">{{$tour->time}} ngày {{$tour->time - 1}} đêm</span>
                         </li>
                         <li class="col-md-6">
-                        <span class="status">Tình trạng: <span class="status-detail">Đang nhận khách</span></span>
+                        <span class="status">Tình trạng: <span class="status-detail">{{$tour->status}}</span></span>
                         </li>
                     </ul>
                     <ul class="d-flex row">
                         <li class="col-md-6">
-                            <span class="pricing-detail">Liên hệ</span>
+                            <span class="pricing-detail">
+                                @if($tour->price == 0)
+                                Liên hệ
+                                @else
+                                Giá: {{$tour->price}}
+                                @endif
+                            </span>
                         </li>
                         <li class="col-md-6">
                             <p>Ngày khởi hành:
-                                <span>2022-05-31</span>
+                                <span>{{$tour->start}}</span>
                             </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" data-bs-whatever="@mdo">
                                 <span class="text css-mkf4c8 text-uppercase">Nhận tư vấn tour</span>
@@ -728,7 +742,13 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
+    <script>
+        var toHtml = document.querySelectorAll('#toHtml');
+        toHtml.forEach(item => {
+        var test = item.textContent;
+        item.innerHTML = test;
+    })
+    </script>
 </body>
-<script src="{{asset('js/app.js')}}"></script>
-
 </html>

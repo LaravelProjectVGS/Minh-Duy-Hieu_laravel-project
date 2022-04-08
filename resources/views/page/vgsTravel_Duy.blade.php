@@ -318,25 +318,27 @@
         <div class="container full-width" id="container">
             <!-- <div class="khoang-trang"></div> -->
             <div class="slide-res">
+                @foreach ($tourHot as $t)
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="card-item card-item-1" style="margin: 86px 0;">
-                        <img src="https://vgstravel.com/img/tour/23-10-2021/thumbnail/thumbnail-343874-1634984901-27-Hand-Luggage-Only-12.jpg"
+                        <img src="{{asset('images/').'/'.$t->img}}"
                             alt="">
                         <div class="hot">
                             <p>Đang nhận khách</p>
                         </div>
                         <div class="card-item-title">
-                            <h3>Tour golf UK - Scotland: từ "Xứ sở sương mù" tới "Quê...</h3>
+                            <h3>{{$t->title}}</h3>
                         </div>
                         <div class="card-item-hide">
-                            <p>Thời gian: 13 ngày 12 đêm</p>
-                            <p>Ngày khởi hành: 2022-04-04</p>
-                            <p>Giá Tour: Liên hệ</p>
-                            <button>Chi Tiết</button>
+                            <p>Thời gian: {{$t->time}} ngày {{$t->time - 1}} đêm</p>
+                            <p>Ngày khởi hành: {{$t->start}}</p>
+                            <p>Giá Tour: {{$t->price}}</p>
+                            <button><a href="{{url('/vgsTour/'.$t->id)}}">Chi Tiết</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3">
+                @endforeach
+                <!-- <div class="col-12 col-sm-6 col-md-3">
                     <div class="card-item card-item-2" style="margin: 86px 0;">
                         <img src="https://vgstravel.com/img/tour/02-11-2021/thumbnail/thumbnail-187600-1635844772-27-p6fW04fo-g6fzEnAfk.jpg"
                             alt="">
@@ -389,7 +391,7 @@
                             <button>Chi Tiết</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -491,10 +493,10 @@
                                     <h3>{{$tour->title}}</h3>
                                 </div>
                                 <div class="card-item-hide">
-                                    <p>Thời gian: {{$tour->time}}</p>
+                                    <p>Thời gian: {{$tour->time}} ngày {{$tour->time - 1}} đêm</p>
                                     <p>Ngày khởi hành: {{$tour->start}}</p>
                                     <p>Giá Tour: {{$tour->price}}</p>
-                                    <button>Chi Tiết</button>
+                                    <button><a href="{{url('/vgsTour/'.$tour->id)}}">Chi Tiết</a></button>
                                 </div>
                             </div>
                         </div>

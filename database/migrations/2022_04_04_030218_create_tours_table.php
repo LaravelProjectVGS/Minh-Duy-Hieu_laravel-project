@@ -16,12 +16,16 @@ class CreateToursTable extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('time');
+            $table->integer('time');
             $table->datetime('created');
             $table->string('start');
             $table->string('price');
             $table->string('img');
             $table->string('status');
+            $table->string('place');
+            $table->string('todolist');
+            $table->string('tour');
+            $table->text('description');
         });
     }
 

@@ -16,6 +16,10 @@ class Tours extends Model
         'price',
         'img',
         'status',
+        'place',
+        'todolist',
+        'tour',
+        'description'
     ];
 
     public $timestamps = false;

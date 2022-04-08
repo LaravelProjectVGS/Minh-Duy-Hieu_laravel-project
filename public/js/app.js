@@ -91,19 +91,17 @@ function setFixed() {
 window.onresize = function a(event) {
     x = document.getElementById("detail").offsetWidth*30/100;
     y = document.getElementById("detail").offsetWidth;
+    z = document.getElementById("post").offsetHeight;
     detaildes = document.getElementById("detail-des").offsetWidth;
+    
     bodyW = $(window).width();
     left = (bodyW - y)/2 + detaildes;
-    
-    console.log(left);
-    console.log(bodyW);
-    console.log(y);
-    console.log(detaildes);
+
 };
 
 window.addEventListener("scroll",function(){ 
     if(window.innerWidth > 768) {
-        if(window.pageYOffset > 1200 && window.pageYOffset < 6080) {
+        if(window.pageYOffset > (500+document.getElementById("post").offsetHeight) && window.pageYOffset < (500+document.getElementById("post").offsetHeight+document.getElementById("detail-des").offsetHeight -500)) {
             $('#mucluc').removeAttr('style');
             setFixed();
         }else{
