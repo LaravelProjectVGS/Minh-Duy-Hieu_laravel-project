@@ -23,7 +23,7 @@ use App\Http\Controllers\TodoController;
 Route::get('/', [PagesController::class, 'createpage']);
 Route::post('/docreatepage', [PagesController::class, 'docreatepage']);
 
-Route::get('/login', [PagesController::class, 'login']);
+// Route::get('/login', [PagesController::class, 'login']);
 
 Route::get('/register', [PagesController::class, 'register']);
 
@@ -94,4 +94,8 @@ Route::get('/blogVgs/search', [BlogVgsController::class, 'search']);
 
 
 Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
