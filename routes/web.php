@@ -38,15 +38,6 @@ Route::get('/tour/delete/{id}', [PagesController::class, 'deletePage']);
 Route::get('/tour/upload', [PagesController::class, 'uploadImg']);
 Route::post('/tour/upload', [PagesController::class, 'imageUploadPost']);
 
-<<<<<<< HEAD
-Route::get('test', function(){
-   return view('components.content');
-});
-
-Route::get('fileview', function () {
-    return view('fileview.fileview');
-});
-=======
 Route::get('/tour/edit/{id}/editimg', [PagesController::class, 'editImg']);
 Route::post('/tour/edit/{id}/editimg', [PagesController::class, 'imageEditPost']);
 
@@ -65,4 +56,3 @@ Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderCon
 
 //Route::any('/ckfinder/examples/{example?}', '\CKSource\CKFinderBridge\Controller\CKFinderController@examplesAction')
 //    ->name('ckfinder_examples');
->>>>>>> minh
