@@ -23,9 +23,9 @@ use App\Http\Controllers\TodoController;
 Route::get('/', [PagesController::class, 'createpage']);
 Route::post('/docreatepage', [PagesController::class, 'docreatepage']);
 
-// Route::get('/login', [PagesController::class, 'login']);
+Route::get('/loginn', [PagesController::class, 'login']);
 
-Route::get('/register', [PagesController::class, 'register']);
+Route::get('/registerr', [PagesController::class, 'register']);
 
 Route::get('/vgsTour/{id}', [PagesController::class, 'vgsTour']);
 
