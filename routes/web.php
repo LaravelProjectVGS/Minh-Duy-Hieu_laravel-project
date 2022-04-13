@@ -1,10 +1,10 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerDemo;
-use App\Http\Controllers\FileController;
-use App\Http\Controllers\VGSController;
-
+use Inertia\Inertia;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,35 +15,35 @@ use App\Http\Controllers\VGSController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/fileview/addfile', [FileController::class, 'create']);
 
-Route::post('/fileview', [FileController::class, 'store']);
-
-Route::get('fileview/{id}/edit', [FileController::class, 'edit']);
-
-Route::resource('/fileview', FileController::class);
-
-Route::get('/login', [ControllerDemo::class, 'login']);
-
-Route::get('/register', [ControllerDemo::class, 'register']);
-
-Route::get('/vgsTour', [ControllerDemo::class, 'vgsTour']);
-
-Route::get('/', function(){
-   return view('components.content');
+Route::get('/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
 
-Route::resource('/vgsuser', VGSController::class);
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/vgsuser', [VGSController::class, 'index']);
+require __DIR__.'/auth.php';
 
-Route::get('/vgstravel', [VGSController::class, 'vgstravel']);
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
 
-Route::post('/vgsuser', [VGSController::class, 'store']);
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+ 
+    return redirect('/login');
+})->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::get('searchuser', [VGSController::class, 'search']);
-
-Route::get('vgsuser/{id}/edit', [VGSController::class, 'edit']);
-
-Route::delete('/delete_user/{id}',[VGSController::class, 'destroy']);
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+ 
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
